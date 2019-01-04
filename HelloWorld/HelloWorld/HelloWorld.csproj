@@ -50,5 +50,8 @@
     <None Include=".gitignore" />
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Help.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

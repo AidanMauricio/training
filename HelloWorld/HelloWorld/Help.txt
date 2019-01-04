@@ -1,0 +1,27 @@
+﻿public void StartMultiply()
+        {
+            var firstNumber = GetInputNumber("first");
+            var secondNumber = GetInputNumber("second");
+            var res = firstNumber * secondNumber;
+            Console.WriteLine(firstNumber + " * " + secondNumber + " = " + res);
+            Console.WriteLine("Press enter to restart calculator");
+            Console.ReadLine();
+        }
+
+public void StartDivide()
+        {
+            var firstNumber = GetInputNumber("first");
+            var secondNumber = GetInputNumber("second");
+            var res = firstNumber / secondNumber;
+            Console.WriteLine(firstNumber + " / " + secondNumber + " = " + res);
+            Console.WriteLine("Press enter to restart calculator");
+            Console.ReadLine();
+        }
+Add a new number to the listOfPrograms
+Don't forget to add the case for the Switch statements:
+
+case 'x':
+                    Console.WriteLine("Program chosen: Multiply/Divide");
+                    StartMultiply()/startDivide;
+                    StartCalculator();
+                    break;
