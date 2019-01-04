@@ -12,7 +12,10 @@ namespace HelloWorld
         {
             var name = "Aidan Mauricio";
             Console.WriteLine("Hello World! " + name);
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
+            //Calculator calc = new Calculator();
+            //calc.StartCalculator();
         }
     }
 }
