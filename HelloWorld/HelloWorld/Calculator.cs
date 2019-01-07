@@ -8,7 +8,8 @@ namespace HelloWorld
 {
     public class Calculator
     {
-        private List<int> listOfPrograms = new List<int>() { 1, 2, 3 };
+
+        private List<int> listOfPrograms = new List<int>() { 1, 2, 3, 4 };
 
         public void StartCalculator()
         {
@@ -18,7 +19,9 @@ namespace HelloWorld
             int programNumber = 0;
             while ((!success && !isCorrect) || (success && !isCorrect))
             {
-                Console.WriteLine("1. Add, 2. Divide,3. End");
+
+                Console.WriteLine("1. Add, 2. Divide, 3. Multiply, 4. End");
+
                 Console.Write("Choose a program: ");
                 var input = Console.ReadLine();
                 success = Int32.TryParse(input, out programNumber);
@@ -52,6 +55,11 @@ namespace HelloWorld
                     StartCalculator();
                     break;
                 case 3:
+                    Console.WriteLine("Program chosen: Multiply");
+                    StartMultiply();// / startDivide;
+                    StartCalculator();
+                    break;
+                case 4:
                     Console.WriteLine("Program ending, press enter to continue...");
                     Console.ReadLine();
                     break;
@@ -66,6 +74,15 @@ namespace HelloWorld
             var secondNumber = GetInputNumber("second");
             var res = firstNumber + secondNumber;
             Console.WriteLine(firstNumber + " + " + secondNumber + " = " + res);
+            Console.WriteLine("Press enter to restart calculator");
+            Console.ReadLine();
+        }
+        public void StartMultiply()
+        {
+            var firstNumber = GetInputNumber("first");
+            var secondNumber = GetInputNumber("second");
+            var res = firstNumber * secondNumber;
+            Console.WriteLine(firstNumber + " * " + secondNumber + " = " + res);
             Console.WriteLine("Press enter to restart calculator");
             Console.ReadLine();
         }
